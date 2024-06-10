@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="userHeading"></h1>
+    </header>
+    <div class="form-container" id="formContainer">
+        <div class="form" id="signupForm" style="display:none;">
+            <div class="heading1">
+                <h1>Signup</h1>
+            </div>
+            <div class="selection">
+                <button onclick="showSignin()">Signin</button>
+                <button onclick="showSignup()">Signup</button>
+            </div>
+            <div>
+                <label for="signupEmail">Email:</label>
+                <input type="email" name="email" id="signupEmail" required>
+            </div>
+            <div>
+                <label for="signupPassword1">Password:</label>
+                <input type="password" name="password1" id="signupPassword1" required>
+            </div>
+            <div>
+                <label for="signupPassword2">Confirm password</label>
+                <input type="password" name="password2" id="signupPassword2" required>
+            </div>
+            <div class="save">
+                <button onclick="saveSignup()">Save</button>
+            </div>
+        </div>
+
+        <div class="form" id="signinForm">
+            <div class="heading1">
+                <h1>Signin</h1>
+            </div>
+            <div class="selection">
+                <button onclick="showSignin()">Signin</button>
+                <button onclick="showSignup()">Signup</button>
+            </div>
+            <div>
+                <label for="signinEmail">Email:</label>
+                <input type="email" name="email" id="signinEmail">
+            </div>
+            <div>
+                <label for="signinPassword">Password:</label>
+                <input type="password" name="password" id="signinPassword">
+            </div>
+            <div>
+                <div class="remember">
+                    <input type="checkbox" name="rememberme" id="rememberme">
+                    <label for="rememberme">Remember me</label>
+                </div>
+                <button>forgot password?</button>
+            </div>
+            <div class="save">
+                <button onclick="saveSignin()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="welcome" id="welcome">
+        <div class="container" id="listContainer">
+            <div class="heading2">
+                <div class="input-group">
+                    <input type="text" id="new-task" placeholder="Add a new task...">
+                    <i class="fa-regular fa-clock" id="reminder"></i>
+                    <i class="fa-solid fa-exclamation" id="important"></i>
+                    <button id="add-task-btn">Add</button>
+                </div>
+            </div>
+            <main>
+                <h2 id="allUser"><button class="" id="filter-button" onclick="filter()">Filter</button>My To-Do List </h2>
+
+                <ul class="task-list" id="task-list">
+                    <!-- <li class="task-item">
+                        <span class="task-text">Salary</span>
+                        <span class="number" id="number">1</span>
+                        <div class="task-buttons">
+                            <span class="task-date">01/01/2024</span>
+                            <button class="edit-btn" onclick="edit_btn(this)">✎</button>
+                            <button class="delete-btn" onclick="delete_btn(this)">&times;</button>
+                        </div>
+                    </li> -->
+                </ul>
+            </main>
+        </div>
+        <script src="https://kit.fontawesome.com/670d8593df.js" crossorigin="anonymous"></script>
+    </div>
+
+
+    <div class="logout">
+        <button id="logout" onclick="logout()">logout</button>
+        <!-- <button onclick="memoryClear()">Memory Reset</button> -->
+    </div>
+
+    <!-- <script src="./app.js"></script> -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

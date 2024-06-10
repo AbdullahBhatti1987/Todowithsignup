@@ -1,0 +1,339 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+header{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 999;
+}
+.form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    min-width: 320px;
+    max-width: 100%;
+    /* display: none; */
+}
+.form {
+    padding: 20px;
+}
+.heading1 h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    text-align: center;
+}
+.selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.selection button {
+    background-color: #007bff;
+    border: none;
+    width: 50%;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.selection button:hover {
+    background-color: #0056b3;
+}
+.selection button.active {
+    background-color: #0056b3;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.save {
+    text-align: center;
+    margin: 20px auto;
+}
+.save button {
+    background-color: #28a745;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.save button:hover {
+    background-color: #218838;
+}
+.remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px!important;
+    margin-bottom: 15px;
+}
+.remember~button{
+    color: #007bff;
+    text-decoration: none;
+    margin-left: auto;
+    border: none!important;
+    background-color: transparent;
+}
+.remember~button:hover {
+    text-decoration: underline;
+}
+.logout{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.logout button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px gray;
+    
+}
+.logout button:active{
+    box-shadow: 1px 1px 2px gray;
+}
+
+/* ========================Todo=================== */
+ 
+:root {
+    --edit-button: #00bfa5;
+    --edit-button-hover: #009688;
+    --delete-button: #ff5252;
+    --delete-button-hover: #e04848;
+    --task-background: #444;
+    --task1-background: #555;
+    --new-task-background: rgba(42, 42, 42, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.welcome {
+    background-image: url(./images/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    position: fixed;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #f4f4f4;
+    padding: 20px;
+
+}
+
+.container {
+    background-color: var(--new-task-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* width: 90%; */
+    width: 400px;
+    padding: 20px;
+    color: #f4f4f4;
+    position: absolute;
+    top: 100px;
+}
+.heading2{
+    z-index: 999;
+    /* margin-bottom: 50px; */
+}
+
+.heading2 h1 {
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+main h2 {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+    gap: 5px;
+    align-items: center;
+}
+
+.input-group > i:first-of-type {
+    background-color: var(--delete-button);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.input-group > i:last-of-type {
+    background-color: var(--delete-button);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-group > i:hover {
+    background-color: var(--delete-button-hover);
+    cursor: pointer;
+}
+
+#new-task {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #555;
+    color: #f4f4f4;
+}
+
+#add-task-btn {
+    background-color: var(--edit-button);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+}
+
+#add-task-btn:hover {
+    background-color: var(--edit-button-hover);
+}
+
+#filter-button{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: var(--edit-button);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+    display: none;
+}
+#filter-button:hover {
+    background-color: var(--edit-button-hover);
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    }
+    
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: var(--task-background);
+}
+.task-item:hover{
+    background-color: var(--task1-background);
+}
+#number{
+    height: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 16px;
+    color: #f4f4f4;
+    margin-right: 10px;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.edit-btn, .delete-btn {
+    background-color: var(--edit-button);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-btn:hover {
+    background-color: var(--edit-button-hover);
+}
+
+.delete-btn {
+    background-color: var(--delete-button);
+    font-size: 19px;
+}
+
+.delete-btn:hover {
+    background-color: var(--delete-button-hover);
+}
+
+.userName{
+    margin-right: 20px;
+    width: 150px;
+    display: none;
+}
+.userName1{
+    margin-right: 20px;
+    width: 150px;
+    display: flex;
+}
