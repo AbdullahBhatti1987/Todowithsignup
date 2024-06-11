@@ -249,8 +249,7 @@ function adminUser() {
   if (getAdminUser === "admin@gmail.com") {
     document.getElementById("listContainer").style.width = "550px";
     filterButton.style.display = 'flex';
-    // document.getElementById('allUser').innerText = 'All Users Todos';
-        
+       
         for(var i = 0; i < adminEmail.length; i++){
           adminEmail[i].style.display = "flex";
 
@@ -265,6 +264,13 @@ function adminUser() {
     }
 }
 
+var filterEmails = document.getElementById('filterEmails');
 function filter(){
-    console.log(task_list.innerHTML)
-}
+  var filter = JSON.parse(localStorage.getItem('ToDos'));
+  
+  }
+
+
+
+
+

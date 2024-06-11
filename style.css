@@ -246,9 +246,9 @@ main h2 {
 }
 
 #filter-button{
-    position: absolute;
-    right: 0px;
-    top: 0px;
+    /* position: absolute; */
+    /* right: 0px; */
+    /* top: 0px; */
     background-color: var(--edit-button);
     color: #fff;
     border: none;
@@ -337,3 +337,20 @@ main h2 {
     width: 150px;
     display: flex;
 }
+.filter{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+    gap: 10px;
+} 
+.filter select{
+    width: 100%;
+    border-radius: 5px;
+    color: whitesmoke;
+    padding-left: 7px;
+    font-size: 16px;
+    background-color: var(--task1-background);
+    }
